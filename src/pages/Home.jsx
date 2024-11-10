@@ -5,9 +5,11 @@ import { NavLink } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Category from '../components/Category';
 import Carousel from '../components/Carousel';
-import products from '../products';
+import { useCategories } from '../context/CategoriesContext';
 
 export default function Home() {
+  const { categories } = useCategories();
+
   return (
     <div className="font-rabbits">
       {/* Sección Hero: Presentación inicial con un carrusel de imágenes */}
@@ -27,7 +29,7 @@ export default function Home() {
 
             {/* Botón para navegar a la página de productos */}
             <button className="font-poppins bg-redAccent text-white text-center text-lg md:text-2xl py-2 px-4 rounded-lg hover:bg-black transition duration-300">
-              <NavLink to="/productos">Ver productos</NavLink>
+              <NavLink to="/products">Ver productos</NavLink>
             </button>
           </div>
         </section>
@@ -37,17 +39,18 @@ export default function Home() {
 
       {/* Sección de Categorías: Muestra las categorías de productos disponibles */}
       <motion.section
-        initial={{ x: -300 }} // El componente empieza 100px a la izquierda
-        animate={{ x: 0 }}    // El componente se mueve a su posición original
-        transition={{ duration: 1 }} // La animación dura 1 segundo
+        initial={{ x: -300 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
         id="categorias"
-        className="py-8 md:py-12 bg-greenDark text-black">
+        className="py-8 md:py-12 bg-greenDark text-black"
+      >
         <h3 className="text-white text-2xl md:text-3xl text-center mb-8 font-poppins font-bold">Categorías Principales</h3>
 
         <div className="flex flex-wrap justify-center">
-          {products.map((category, index) => (
-            <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-              <Category text={category.category} /> {/* Aquí se obtiene el nombre de la categoría */}
+          {categories.map((category) => (
+            <div key={category._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
+              <Category id={category._id} text={category.name} /> {/* Pasar el ID y nombre de la categoría */}
             </div>
           ))}
         </div>

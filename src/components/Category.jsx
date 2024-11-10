@@ -3,12 +3,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Category({ text }) {
+export default function Category({ id, text }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Redirigir a la página de productos con la categoría como parámetro
-    navigate(`/productos?categoria=${text}`);
+    // Redirigir a la página de productos con el ID de la categoría como parámetro
+    navigate(`/products?category=${id}`);
   };
 
   return (
