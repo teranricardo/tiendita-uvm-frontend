@@ -1,11 +1,12 @@
 # tiendita-uvm-frontend-e-actividad
-Este repositorio contiene el desarrollo del frontend del proyecto La Tiendita UVM, enfocado en el diseño web utilizando HTML, CSS, React y Tailwind CSS. El objetivo de esta actividad es crear un sitio web visualmente atractivo y funcional, siguiendo los principios de UI/UX y aplicando las propiedades esenciales de CSS y Tailwind CSS, haciendo uso del diseño responsive, incluyendo un menú desplegable, un carrusel de imágenes y efecto parallax.
+Este repositorio contiene el desarrollo del frontend del proyecto La Tiendita UVM, enfocado en el diseño web utilizando HTML, CSS, React y Tailwind CSS. El objetivo de esta actividad es crear un sitio web visualmente atractivo y funcional, siguiendo los principios de UI/UX y aplicando las propiedades esenciales de CSS y Tailwind CSS, haciendo uso del diseño responsive, incluyendo un menú desplegable, un carrusel de imágenes y efecto parallax. Contiene un panel de administración para el gestor de contenido.
 
 ## Páginas Principales
 - Inicio (Landing Page): Introducción a la tienda y sus categorías principales.
 - Productos: Visualización de los productos disponibles.
 - Detalles de Producto: Visualización de un productos on descripciones y detalles.
-- Formulario de Contacto: Permite a los usuarios comunicarse con la tienda.
+- Login Y Registro: Registro para la primera vez que se usa el el gestor de contenido e inicio de sesión de usuarios gestores.
+- Gestor de Contenido: Panel de administración para gestionar productos, categorías y usuarios.
 
 ## Características de Diseño
 - Estilización mediante Tailwind CSS con una paleta de colores personalizada y tipografías específicas (Rabbits Dummy y Poppins).
